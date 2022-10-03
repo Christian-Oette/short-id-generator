@@ -54,6 +54,7 @@ public class ShortUUIDGenerator {
         String suffixWithPadding = padWithLeadingZeros(suffix, idsPerSecond.digits);
 
         long seconds = offsetDateTime.until(dateTime, ChronoUnit.SECONDS);
+        System.out.println(seconds);
         return prefix + base.format(seconds) + suffixWithPadding;
     }
 

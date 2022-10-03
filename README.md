@@ -1,5 +1,9 @@
 # Short UUID generator
 
+The idea of this code is described in more detail in a blog post, which you can find here
+
+https://christianoette.com/en/blog/blog-post/2022-10-03-short-id
+
 ## How it works
 
 It uses the current date and time and a round-robin counter to generate an id.

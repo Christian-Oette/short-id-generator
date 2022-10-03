@@ -31,6 +31,24 @@ class ShortUUIDGeneratorTest {
         assertEquals(expectedPrefix + "01", result);
     }
 
+
+    @Test
+    public void testGenerate2() {
+        // given
+        var generator = new ShortUUIDGenerator(
+                ShortUUIDGenerator.DEFAULT_OFFSET_DATE_TIME,
+                0,
+                ShortUUIDGenerator.ExpectedIdsPerSecond.HIGH,
+                ShortUUIDGenerator.Base.BASE_36);
+        var testDateTime = LocalDateTime.of(LocalDate.of(2022,3,10), LocalTime.MIDNIGHT);
+
+        // when
+        var result = generator.generate( testDateTime);
+
+        // the
+        System.out.println(result);
+    }
+
     @Test
     public void test100yearsFutureDate() {
         // given
